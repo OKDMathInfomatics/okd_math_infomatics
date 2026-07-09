@@ -8,7 +8,7 @@
       <div class="profile-header">
         <div class="avatar">奥田</div>
         <div class="profile-meta">
-          <h2 class="profile-name">奥田 <span class="profile-name-kana">（おくだ）</span></h2>
+          <h2 class="profile-name">奥田 健太 <span class="profile-name-kana">（おくだ けんた）</span></h2>
           <div class="profile-badges">
             <span class="badge badge-math">数学</span>
             <span class="badge badge-info">情報</span>
@@ -25,7 +25,7 @@
           </div>
           <div class="info-item">
             <div class="info-label">所属校舎</div>
-            <div class="info-value">創学ゼミ ○○校舎</div>
+            <div class="info-value">創学ゼミ 姫路校</div>
           </div>
           <div class="info-item">
             <div class="info-label">受付時間</div>
