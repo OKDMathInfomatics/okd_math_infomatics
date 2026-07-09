@@ -21,14 +21,7 @@
         <div class="info-grid">
           <div class="info-item">
             <div class="info-label">担当科目</div>
-            <div class="info-value">数学（数Ⅰ・A / 数Ⅱ・B / 数Ⅲ）、情報（情報Ⅰ / 情報Ⅱ）</div>
-          </div>
-          <div class="info-item">
-            <div class="info-label">担当講座</div>
-            <div class="info-value">
-              高2数学レギュラー、高3数学ファイナル、高1情報基礎
-              <br /><span class="info-note">※詳細は「講座を探す」からご確認ください</span>
-            </div>
+            <div class="info-value">数学（数Ⅰ・A / 数Ⅱ・B / 数Ⅲ・C）、情報（情報Ⅰ）</div>
           </div>
           <div class="info-item">
             <div class="info-label">所属校舎</div>
@@ -38,6 +31,20 @@
             <div class="info-label">受付時間</div>
             <div class="info-value">授業前後、または授業後の質問タイム（要予約）</div>
           </div>
+        </div>
+
+        <!-- 担当講座一覧 -->
+        <div class="courses-section">
+          <div class="courses-label">担当講座</div>
+          <ul class="course-list">
+            <li v-for="course in courses" :key="course.name" class="course-list-item">
+              <div class="course-list-header">
+                <span class="badge" :class="course.badge">{{ course.subject }}</span>
+                <span class="course-list-name">{{ course.name }}</span>
+              </div>
+              <p class="course-list-desc">{{ course.desc }}</p>
+            </li>
+          </ul>
         </div>
 
         <!-- メッセージ -->
@@ -60,7 +67,50 @@
 </template>
 
 <script setup>
-// 講師情報は静的コンテンツ。後ほど courses.json から担当講座一覧を動的に表示予定。
+const courses = [
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高３ハイレベル数学ⅠAⅡBⅢC',
+    desc: '阪大・神大をはじめとする難関大学合格に必要な思考力・記述力を鍛えます。'
+  },
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高３スタンダード数学ⅠAⅡB＋C',
+    desc: '国公立大学合格に必要な土台を構築するとともに定石力を身につけます。'
+  },
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高２東大京大阪大医学部数学',
+    desc: '最難関大学合格を目指し、高速かつ高度な単元学習を目指します。'
+  },
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高２ハイレベル理系数学',
+    desc: '難関大学合格を目指し、高速単元学習を目指します。'
+  },
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高１数学《発展1》',
+    desc: '最難関大学合格を目指し、高速かつ高度な単元学習を目指します。'
+  },
+  {
+    subject: '数学',
+    badge: 'badge-math',
+    name: '高１数学《発展2》',
+    desc: '難関大学合格へ向け、本当の単元理解を目指します。'
+  },
+  {
+    subject: '情報',
+    badge: 'badge-info',
+    name: '高３共通テスト対策情報Ⅰ',
+    desc: '共通テストで高得点を取るために必要な傾向と対策をお伝えします。'
+  }
+]
 </script>
 
 <style scoped>
@@ -151,6 +201,48 @@
   font-size: var(--font-size-sm);
   line-height: 1.9;
   color: var(--color-text);
+}
+
+/* 担当講座リスト */
+.courses-section {
+  margin-bottom: var(--space-6);
+}
+.courses-label {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+.course-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.course-list-item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg);
+}
+.course-list-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+.course-list-name {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text);
+}
+.course-list-desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  padding-left: calc(var(--space-2) + 52px);
 }
 
 .cta {
