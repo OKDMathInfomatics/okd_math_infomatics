@@ -1,57 +1,65 @@
 [
   {
-    "id": "MATH_G2_REG_2024",
-    "name": "高3ハイレベル数学IAIIBIIIC",
+    "id": "MATH_G1_DEV1_2024",
+    "name": "高１数学《発展1》",
     "subject": "math",
-    "grade": "grade3",
-    "description": "大阪大学や神戸大学をはじめとする難関大学合格に必要な記述力を鍛えます。",
-    "studentCount": 60,
-    "testCount": 5
+    "grade": "grade1",
+    "description": "最難関大学合格を目指し、高速かつ高度な単元学習を目指します。",
+    "studentCount": 0,
+    "testCount": 0
   },
   {
-    "id": "MATH_G3_FINAL_2024",
-    "name": "高2東大京大阪大医学部理系数学",
+    "id": "MATH_G1_DEV2_2024",
+    "name": "高１数学《発展2》",
+    "subject": "math",
+    "grade": "grade1",
+    "description": "難関大学合格へ向け、本当の単元理解を目指します。",
+    "studentCount": 0,
+    "testCount": 0
+  },
+  {
+    "id": "MATH_G2_TOP_2024",
+    "name": "高２東大京大阪大医学部数学",
     "subject": "math",
     "grade": "grade2",
-    "description": "最難関大学合格へ向けた高速かつ高度な単元学習の完成を目指します。",
-    "studentCount": 8,
-    "testCount": 4
+    "description": "最難関大学合格を目指し、高速かつ高度な単元学習を目指します。",
+    "studentCount": 0,
+    "testCount": 0
   },
   {
-    "id": "MATH_G1_BASIC_2024",
-    "name": "高3スタンダード数学IAIIB+C",
+    "id": "MATH_G2_HL_2024",
+    "name": "高２ハイレベル理系数学",
+    "subject": "math",
+    "grade": "grade2",
+    "description": "難関大学合格を目指し、高速単元学習を目指します。",
+    "studentCount": 0,
+    "testCount": 0
+  },
+  {
+    "id": "MATH_G3_HL_2024",
+    "name": "高３ハイレベル数学ⅠAⅡBⅢC",
     "subject": "math",
     "grade": "grade3",
-    "description": "国公立大学合格への数学IAIIB+Cの土台構築を目指します。",
-    "studentCount": 20,
-    "testCount": 3
+    "description": "阪大・神大をはじめとする難関大学合格に必要な思考力・記述力を鍛えます。",
+    "studentCount": 0,
+    "testCount": 0
   },
   {
-    "id": "MATH_G1_BASIC_2024",
-    "name": "高2ハイレベル理系数学",
+    "id": "MATH_G3_STD_2024",
+    "name": "高３スタンダード数学ⅠAⅡB＋C",
     "subject": "math",
     "grade": "grade3",
-    "description": "難関大学合格へ向けた高速な単元学習の完成を目指します",
-    "studentCount": 20,
-    "testCount": 3
-  },
- {
-    "id": "MATH_G1_BASIC_2024",
-    "name": "高1数学《発展1》",
-    "subject": "math",
-    "grade": "grade1",
-    "description": "難関大学合格へ向けた高速な単元学習の完成を目指します",
-    "studentCount": 20,
-    "testCount": 3
+    "description": "国公立大学合格に必要な土台を構築するとともに定石力を身につけます。",
+    "studentCount": 0,
+    "testCount": 0
   },
   {
-    "id": "INFO_G1_BASIC_2024",
-    "name": "高3共通テスト対策情報I",
+    "id": "INFO_G3_CST_2024",
+    "name": "高３共通テスト対策情報Ⅰ",
     "subject": "info",
-    "grade": "grade1",
-    "description": "共通テスト過去問から傾向を学び、今必要な力を提示します。",
-    "studentCount": 15,
-    "testCount": 3
-  },
-
+    "grade": "grade3",
+    "description": "共通テストで高得点を取るために必要な傾向と対策をお伝えします。",
+    "studentCount": 0,
+    "testCount": 0
+  }
 ]

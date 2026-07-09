@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -41,12 +41,34 @@ const subjectLabel = computed(() =>
   subjectId.value === 'math' ? '数学' : '情報'
 )
 
-// 学年一覧（後ほど courses.json から動的に生成）
-const grades = [
-  { id: 'grade1', label: '高1', name: '高校1年生', courseCount: 2 },
-  { id: 'grade2', label: '高2', name: '高校2年生', courseCount: 3 },
-  { id: 'grade3', label: '高3', name: '高校3年生', courseCount: 4 }
+const allCourses = ref([])
+
+onMounted(async () => {
+  try {
+    const res = await fetch(new URL('@/data/courses.json', import.meta.url).href)
+    allCourses.value = await res.json()
+  } catch (e) {
+    console.error('講座データ取得失敗:', e)
+  }
+})
+
+const gradeBase = [
+  { id: 'grade1', label: '高1', name: '高校1年生' },
+  { id: 'grade2', label: '高2', name: '高校2年生' },
+  { id: 'grade3', label: '高3', name: '高校3年生' }
 ]
+
+// courses.json から科目・学年ごとの講座数を動的に計算
+const grades = computed(() =>
+  gradeBase
+    .map(g => ({
+      ...g,
+      courseCount: allCourses.value.filter(
+        c => c.subject === subjectId.value && c.grade === g.id
+      ).length
+    }))
+    .filter(g => g.courseCount > 0)  // 講座がない学年は非表示
+)
 </script>
 
 <style scoped>
