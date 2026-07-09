@@ -3,27 +3,28 @@
     <div class="container navbar-inner">
       <!-- ロゴ -->
       <RouterLink to="/" class="navbar-logo">
-        <span class="logo-text">創学ゼミ</span>
-        <span class="logo-sub">数学・情報</span>
+        <span class="logo-sougaku">SOUGAKU</span>
+        <span class="logo-sep">|</span>
+        <span class="logo-sub">OKD MATH / Informatics</span>
       </RouterLink>
 
       <!-- デスクトップナビ -->
       <ul class="navbar-links" :class="{ open: menuOpen }">
         <li>
-          <RouterLink to="/" @click="menuOpen = false">ホーム</RouterLink>
+          <RouterLink to="/" @click="menuOpen = false">HOME</RouterLink>
         </li>
         <li>
-          <RouterLink to="/instructor" @click="menuOpen = false">講師紹介</RouterLink>
+          <RouterLink to="/instructor" @click="menuOpen = false">INSTRUCTOR</RouterLink>
         </li>
         <li>
-          <RouterLink to="/subjects" @click="menuOpen = false">講座を探す</RouterLink>
+          <RouterLink to="/subjects" @click="menuOpen = false">COURSES</RouterLink>
         </li>
         <li class="nav-admin">
           <RouterLink to="/admin" @click="menuOpen = false">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
             </svg>
-            管理者
+            ADMIN
           </RouterLink>
         </li>
       </ul>
@@ -41,7 +42,6 @@
       </button>
     </div>
 
-    <!-- モバイルメニュー背景オーバーレイ -->
     <Transition name="overlay">
       <div v-if="menuOpen" class="menu-overlay" @click="menuOpen = false" />
     </Transition>
@@ -69,15 +69,15 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   left: 0;
   right: 0;
   height: var(--navbar-height);
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(240, 235, 224, 0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   z-index: 100;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 .navbar.scrolled {
   border-color: var(--color-border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 1px 8px rgba(26, 42, 74, 0.08);
 }
 
 .navbar-inner {
@@ -90,26 +90,32 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
 /* ロゴ */
 .navbar-logo {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: var(--space-2);
   text-decoration: none;
 }
-.logo-text {
-  font-size: var(--font-size-lg);
-  font-weight: 700;
+.logo-sougaku {
+  font-size: 16px;
+  font-weight: 800;
   color: var(--color-primary);
+  letter-spacing: 0.12em;
+}
+.logo-sep {
+  color: var(--color-border-dark);
+  font-weight: 300;
 }
 .logo-sub {
-  font-size: var(--font-size-xs);
+  font-size: 11px;
   color: var(--color-text-muted);
   font-weight: 500;
+  letter-spacing: 0.06em;
 }
 
 /* ナビリンク */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: var(--space-1);
+  gap: 0;
   list-style: none;
 }
 .navbar-links li a,
@@ -118,27 +124,35 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   align-items: center;
   gap: 5px;
   padding: var(--space-2) var(--space-3);
-  border-radius: var(--radius);
-  font-size: var(--font-size-sm);
-  font-weight: 500;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: color 0.15s;
+  border-bottom: 2px solid transparent;
 }
 .navbar-links li a:hover,
 .navbar-links li a.router-link-active {
-  background: var(--color-primary-light);
   color: var(--color-primary);
+  border-bottom-color: var(--color-accent);
   text-decoration: none;
 }
 
 /* 管理者リンク */
+.nav-admin {
+  margin-left: var(--space-4);
+}
 .nav-admin a {
-  border: 1.5px solid var(--color-border);
-  margin-left: var(--space-2);
+  background: var(--color-primary);
+  color: white !important;
+  border-radius: var(--radius);
+  padding: var(--space-1) var(--space-3) !important;
+  border-bottom: none !important;
 }
 .nav-admin a:hover {
-  border-color: var(--color-primary);
+  background: var(--color-primary-dark);
+  color: white !important;
 }
 
 /* ハンバーガー */
@@ -155,71 +169,47 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
   display: block;
   width: 22px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--color-primary);
   border-radius: 2px;
   transition: transform 0.2s, opacity 0.2s;
 }
-.hamburger.active span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* オーバーレイ */
 .menu-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.3);
   z-index: -1;
 }
-.overlay-enter-active,
-.overlay-leave-active {
-  transition: opacity 0.2s;
-}
-.overlay-enter-from,
-.overlay-leave-to {
-  opacity: 0;
-}
+.overlay-enter-active, .overlay-leave-active { transition: opacity 0.2s; }
+.overlay-enter-from, .overlay-leave-to { opacity: 0; }
 
-/* モバイル */
 @media (max-width: 680px) {
   .hamburger { display: flex; }
-
   .navbar-links {
     position: fixed;
     top: var(--navbar-height);
     right: 0;
     bottom: 0;
-    width: 240px;
+    width: 220px;
     flex-direction: column;
     align-items: stretch;
     gap: 0;
-    background: white;
+    background: #f8f4ec;
     padding: var(--space-4);
     transform: translateX(100%);
     transition: transform 0.25s ease;
     box-shadow: var(--shadow-lg);
   }
-  .navbar-links.open {
-    transform: translateX(0);
-  }
+  .navbar-links.open { transform: translateX(0); }
   .navbar-links li a {
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--font-size-base);
+    padding: var(--space-3) var(--space-4) !important;
+    font-size: var(--font-size-sm) !important;
     border-radius: var(--radius);
+    border-bottom: none !important;
   }
-  .nav-admin {
-    margin-top: var(--space-4);
-    border-top: 1px solid var(--color-border);
-    padding-top: var(--space-4);
-  }
-  .nav-admin a {
-    border: none;
-    margin-left: 0;
-  }
+  .nav-admin { margin-left: 0; margin-top: var(--space-4); }
 }
 </style>

@@ -30,12 +30,14 @@ import NavBar from '@/components/NavBar.vue'
 }
 
 .site-footer {
-  background: var(--color-text);
-  color: #94a3b8;
-  padding: var(--space-5) 0;
-  font-size: var(--font-size-sm);
+  background: var(--color-primary);
+  color: rgba(255,255,255,0.5);
+  padding: var(--space-6) 0;
+  font-size: 11px;
   text-align: center;
   margin-top: auto;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* ページ遷移アニメーション */

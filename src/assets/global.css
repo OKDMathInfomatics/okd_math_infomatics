@@ -8,34 +8,35 @@
 }
 
 :root {
-  /* カラーパレット */
-  --color-primary: #1a56db;
-  --color-primary-dark: #1240a8;
-  --color-primary-light: #e8f0fe;
-  --color-secondary: #0ea5e9;
-  --color-accent: #f59e0b;
+  /* カラーパレット — 参考サイト同系統 */
+  --color-primary: #1a2a4a;        /* ダークネイビー */
+  --color-primary-dark: #0f1a30;
+  --color-primary-light: #e8ecf4;
+  --color-accent: #c8922a;         /* ゴールド */
+  --color-accent-light: #f5e6c8;
+  --color-secondary: #2d5a8e;
 
   /* 教科カラー */
-  --color-math: #3b82f6;
-  --color-math-light: #dbeafe;
-  --color-info: #10b981;
-  --color-info-light: #d1fae5;
+  --color-math: #1a2a4a;
+  --color-math-light: #e8ecf4;
+  --color-info: #c8922a;
+  --color-info-light: #f5e6c8;
 
   /* テキスト */
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-text-light: #94a3b8;
+  --color-text: #1a2a4a;
+  --color-text-muted: #5a6a7a;
+  --color-text-light: #8a9aaa;
 
-  /* 背景 */
-  --color-bg: #f8fafc;
+  /* 背景 — クリームベージュ */
+  --color-bg: #f0ebe0;
   --color-bg-card: #ffffff;
-  --color-border: #e2e8f0;
-  --color-border-dark: #cbd5e1;
+  --color-border: #ddd8cc;
+  --color-border-dark: #c8c0b0;
 
   /* 状態カラー */
-  --color-success: #22c55e;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
+  --color-success: #2d7a4a;
+  --color-warning: #c8922a;
+  --color-danger: #c0392b;
 
   /* スペーシング */
   --space-1: 4px;
@@ -50,7 +51,7 @@
 
   /* タイポグラフィ */
   --font-sans: 'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', sans-serif;
-  --font-size-xs: 12px;
+  --font-size-xs: 11px;
   --font-size-sm: 13px;
   --font-size-base: 15px;
   --font-size-lg: 18px;
@@ -59,16 +60,16 @@
   --font-size-3xl: 36px;
 
   /* ボーダーラジアス */
-  --radius-sm: 4px;
-  --radius: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-sm: 3px;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
 
   /* シャドウ */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px rgba(26, 42, 74, 0.06);
+  --shadow: 0 2px 6px rgba(26, 42, 74, 0.08);
+  --shadow-md: 0 4px 12px rgba(26, 42, 74, 0.10);
+  --shadow-lg: 0 8px 24px rgba(26, 42, 74, 0.12);
 
   /* ナビの高さ */
   --navbar-height: 60px;
@@ -80,7 +81,12 @@ body {
   font-family: var(--font-sans);
   font-size: var(--font-size-base);
   color: var(--color-text);
-  background: var(--color-bg);
+  background-color: var(--color-bg);
+  /* グリッドパターン背景 */
+  background-image:
+    linear-gradient(rgba(26, 42, 74, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 42, 74, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
@@ -96,7 +102,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  text-decoration: underline;
+  color: var(--color-accent);
 }
 
 img {
@@ -111,7 +117,7 @@ button {
 
 /* ===== Utility Classes ===== */
 .container {
-  max-width: 1100px;
+  max-width: 1060px;
   margin: 0 auto;
   padding: 0 var(--space-6);
 }
@@ -140,6 +146,7 @@ button {
   border: none;
   transition: all 0.15s ease;
   text-decoration: none;
+  letter-spacing: 0.02em;
 }
 .btn-primary {
   background: var(--color-primary);
@@ -147,6 +154,16 @@ button {
 }
 .btn-primary:hover {
   background: var(--color-primary-dark);
+  color: white;
+  text-decoration: none;
+}
+.btn-accent {
+  background: var(--color-accent);
+  color: white;
+}
+.btn-accent:hover {
+  background: #a87520;
+  color: white;
   text-decoration: none;
 }
 .btn-outline {
@@ -163,25 +180,29 @@ button {
 .badge {
   display: inline-block;
   padding: 2px 10px;
-  border-radius: 20px;
+  border-radius: 3px;
   font-size: var(--font-size-xs);
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
 .badge-math {
   background: var(--color-math-light);
   color: var(--color-math);
+  border: 1px solid #c8d0e0;
 }
 .badge-info {
   background: var(--color-info-light);
   color: var(--color-info);
+  border: 1px solid #e0c890;
 }
 
 /* ページタイトル共通スタイル */
 .page-title {
   font-size: var(--font-size-2xl);
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-primary);
   margin-bottom: var(--space-2);
+  letter-spacing: -0.01em;
 }
 .page-subtitle {
   font-size: var(--font-size-base);
@@ -194,13 +215,25 @@ button {
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   color: var(--color-text-muted);
   margin-bottom: var(--space-6);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 .breadcrumb a {
-  color: var(--color-primary);
+  color: var(--color-text-muted);
+}
+.breadcrumb a:hover {
+  color: var(--color-accent);
 }
 .breadcrumb-sep {
   color: var(--color-border-dark);
+}
+
+/* セクション区切り線 */
+.section-divider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-8) 0;
 }
