@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
-// リポジトリ名に合わせて変更してください（例: /sougaku-zemi/）
-const REPO_NAME = '/sougaku-zemi/'
+// リポジトリ名に合わせて変更してください（例: /okd_math_infomatics/）
+const REPO_NAME = '/okd_math_infomatics/'
 
 export default defineConfig({
   plugins: [vue()],
