@@ -1,0 +1,47 @@
+[
+  {
+    "id": "MATH_G2_REG_2024",
+    "name": "高2数学レギュラー（数学Ⅱ・B）",
+    "subject": "math",
+    "grade": "grade2",
+    "description": "数学Ⅱ・Bの基礎から標準問題まで。三角関数・指数対数・数列・ベクトルを扱います。",
+    "studentCount": 18,
+    "testCount": 5
+  },
+  {
+    "id": "MATH_G3_FINAL_2024",
+    "name": "高3数学ファイナル（数学Ⅲ）",
+    "subject": "math",
+    "grade": "grade3",
+    "description": "数学Ⅲの極限・微積分を集中的に演習。共通テスト後の二次対策コース。",
+    "studentCount": 12,
+    "testCount": 4
+  },
+  {
+    "id": "MATH_G1_BASIC_2024",
+    "name": "高1数学基礎（数学Ⅰ・A）",
+    "subject": "math",
+    "grade": "grade1",
+    "description": "数学Ⅰ・Aの基礎固め。二次関数・三角比・集合と論理を丁寧に解説します。",
+    "studentCount": 20,
+    "testCount": 3
+  },
+  {
+    "id": "INFO_G1_BASIC_2024",
+    "name": "高1情報基礎（情報Ⅰ）",
+    "subject": "info",
+    "grade": "grade1",
+    "description": "情報Ⅰの基礎。プログラミング・アルゴリズム・データの扱い方を学びます。",
+    "studentCount": 15,
+    "testCount": 3
+  },
+  {
+    "id": "INFO_G2_ADV_2024",
+    "name": "高2情報演習（情報Ⅱ）",
+    "subject": "info",
+    "grade": "grade2",
+    "description": "情報Ⅱ対策。ネットワーク・データベース・AIの基礎を扱います。",
+    "studentCount": 10,
+    "testCount": 2
+  }
+]
