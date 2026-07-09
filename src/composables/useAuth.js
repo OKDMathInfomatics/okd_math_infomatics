@@ -12,7 +12,7 @@
 // ★ここにパスワードのSHA-256ハッシュを設定してください
 // 生成方法: https://emn178.github.io/online-tools/sha256.html
 // デフォルト: "sougaku2024" のハッシュ
-const ADMIN_PASSWORD_HASH = '8e9c2e5bd5ccb8a17ebf4c0b5e4d1f3a2b6c9e1f0d4a7b8c3e5f2a1d9b6c4e7'
+const ADMIN_PASSWORD_HASH = '1cad42439406288ad393125a00813818db0e72056a88069e80af28d26a3b8069'
 // ↑ 必ず本番前にご自身のパスワードのハッシュに変更してください
 
 const SESSION_KEY = 'sougaku_admin_auth'
