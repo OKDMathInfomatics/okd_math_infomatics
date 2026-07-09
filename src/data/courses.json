@@ -1,20 +1,20 @@
 [
   {
     "id": "MATH_G2_REG_2024",
-    "name": "高2数学レギュラー（数学Ⅱ・B）",
+    "name": "高3ハイレベル数学IAIIBIIIC",
     "subject": "math",
-    "grade": "grade2",
-    "description": "数学Ⅱ・Bの基礎から標準問題まで。三角関数・指数対数・数列・ベクトルを扱います。",
-    "studentCount": 18,
+    "grade": "grade3",
+    "description": "大阪大学や神戸大学をはじめとする難関大学合格に必要な記述力を鍛えます。",
+    "studentCount": 60,
     "testCount": 5
   },
   {
     "id": "MATH_G3_FINAL_2024",
-    "name": "高3数学ファイナル（数学Ⅲ）",
+    "name": "高2東大京大阪大医学部理系数学",
     "subject": "math",
-    "grade": "grade3",
-    "description": "数学Ⅲの極限・微積分を集中的に演習。共通テスト後の二次対策コース。",
-    "studentCount": 12,
+    "grade": "grade2",
+    "description": "最難関大学合格へ向けた高速かつ高度な単元学習の完成を目指します。",
+    "studentCount": 8,
     "testCount": 4
   },
   {
