@@ -19,29 +19,39 @@
   },
   {
     "id": "MATH_G1_BASIC_2024",
-    "name": "高1数学基礎（数学Ⅰ・A）",
+    "name": "高3スタンダード数学IAIIB+C",
+    "subject": "math",
+    "grade": "grade3",
+    "description": "国公立大学合格への数学IAIIB+Cの土台構築を目指します。",
+    "studentCount": 20,
+    "testCount": 3
+  },
+  {
+    "id": "MATH_G1_BASIC_2024",
+    "name": "高2ハイレベル理系数学",
+    "subject": "math",
+    "grade": "grade3",
+    "description": "難関大学合格へ向けた高速な単元学習の完成を目指します",
+    "studentCount": 20,
+    "testCount": 3
+  },
+ {
+    "id": "MATH_G1_BASIC_2024",
+    "name": "高1数学《発展1》",
     "subject": "math",
     "grade": "grade1",
-    "description": "数学Ⅰ・Aの基礎固め。二次関数・三角比・集合と論理を丁寧に解説します。",
+    "description": "難関大学合格へ向けた高速な単元学習の完成を目指します",
     "studentCount": 20,
     "testCount": 3
   },
   {
     "id": "INFO_G1_BASIC_2024",
-    "name": "高1情報基礎（情報Ⅰ）",
+    "name": "高3共通テスト対策情報I",
     "subject": "info",
     "grade": "grade1",
-    "description": "情報Ⅰの基礎。プログラミング・アルゴリズム・データの扱い方を学びます。",
+    "description": "共通テスト過去問から傾向を学び、今必要な力を提示します。",
     "studentCount": 15,
     "testCount": 3
   },
-  {
-    "id": "INFO_G2_ADV_2024",
-    "name": "高2情報演習（情報Ⅱ）",
-    "subject": "info",
-    "grade": "grade2",
-    "description": "情報Ⅱ対策。ネットワーク・データベース・AIの基礎を扱います。",
-    "studentCount": 10,
-    "testCount": 2
-  }
+
 ]
